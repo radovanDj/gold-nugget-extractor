@@ -28,8 +28,8 @@ from gold_nugget_extractor.index import generate_book_index, generate_book_summa
 
 
 # Vector Database Configuration
-VECTOR_DB_PATH = "/home/roboticresults/Documents/VectorDatabaseForKiloCLI/data"
-COLLECTION_NAME = "documents"
+VECTOR_DB_PATH = os.getenv("CHROMA_DB_PATH", "./chroma_db")
+COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "documents")
 
 
 # Extractor Prompt for the LLM
